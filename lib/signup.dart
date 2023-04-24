@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
+import 'package:lifeblood/tech.dart';
 
 
 class SignupApp extends StatefulWidget {
@@ -732,13 +733,15 @@ class _SignupAppState extends State<SignupApp> {
                     TextButton(
                   child: Text('Agree and Continue', style: TextStyle(fontSize: 15, color: Colors.white),),
                   onPressed: () => {
+                   Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => HomeScreen(
+                      Fname: fnamecontroller.text,
+                    )),
+                  ),
                      
-                    print(fnamecontroller.text),
-                    print(lastnamecontroller.text),
-                    print(bloodcontroller.text),
-                    listt = ['fname: ${fnamecontroller.text}', 'lname:${lastnamecontroller.text}',
-                     'blood:${getVal}'].toList(),
-                    print(listt)
+                     
+                     
                   },
                       
                     )

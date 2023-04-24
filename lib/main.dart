@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:lifeblood/signup.dart';
-// ignore: unused_import
 import 'package:lifeblood/login.dart';
 
 void main() {
@@ -24,7 +23,6 @@ class MyApp extends StatelessWidget {
 
 
 class MainApp extends StatelessWidget {
-  
   const MainApp({
     super.key,
   });
@@ -128,12 +126,12 @@ class MainApp extends StatelessWidget {
               SizedBox(
                 height: 10,
               ),
-              GestureDetector(
-                onTap: () {
+            GestureDetector(
+                 onTap: () {
                   print("clicked");
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => SignupApp()),
+                    MaterialPageRoute(builder: (context) => LoginApp()),
                   );
                 },
                 child: Container(
